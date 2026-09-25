@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Для тебя 💛</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'Georgia', serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe6f0 0%, #fff5e6 50%, #e6f0ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 50px 40px;
+    max-width: 620px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(255, 150, 180, 0.25);
+    animation: fadeIn 1.2s ease;
+    position: relative;
+    z-index: 2;
+  }
+  h1 {
+    font-size: 2em;
+    color: #d6336c;
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  .heart {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: beat 1.4s infinite;
+    display: inline-block;
+  }
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 34px;
+    background: linear-gradient(135deg, #ff8fab, #ffb3c6);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.05em;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 20px rgba(255, 143, 171, 0.45);
+  }
+  .btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 28px rgba(255, 143, 171, 0.6);
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+  }
+  /* падающие сердечки */
+  .float {
+    position: fixed;
+    bottom: -50px;
+    font-size: 24px;
+    animation: floatUp linear infinite;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+  }
+  @keyframes floatUp {
+    to { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="heart">💛</div>
+  <h1>Привет, солнышко</h1>
+  <p>Я сегодня чувствую себя очень пассивным и вялым. Не знаю, каких слов подобрать, дабы поднять тебе настроение или просто о чём-то рассказать.</p>
+  <p>Но я стараюсь. Правда. Прости за такой день меня.</p>
+  <p>Ты всё равно самое лучшее, что у меня есть ✨</p>
+  <a href="page2.html" class="btn">Нажми сюда 💌</a>
+</div>
+
+<script>
+  const emojis = ['💛','💖','🌸','✨','💫','🌷','💕'];
+  for (let i = 0; i < 18; i++) {
+    const el = document.createElement('div');
+    el.className = 'float';
+    el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    el.style.left = Math.random() * 100 + 'vw';
+    el.style.animationDuration = (8 + Math.random() * 8) + 's';
+    el.style.animationDelay = Math.random() * 8 + 's';
+    el.style.fontSize = (16 + Math.random() * 20) + 'px';
+    document.body.appendChild(el);
+  }
+</script>
+
+</body>
+</html>
