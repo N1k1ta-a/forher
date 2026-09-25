@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Немного тепла 🌸</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'Georgia', serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e6f0ff 0%, #fff0f5 50%, #fff5e6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 45px 38px;
+    max-width: 640px;
+    box-shadow: 0 20px 60px rgba(150, 180, 255, 0.25);
+    animation: fadeIn 1s ease;
+  }
+  h1 {
+    font-size: 1.9em;
+    color: #7048e8;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    margin-bottom: 28px;
+  }
+  li {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    font-size: 1.08em;
+    color: #444;
+    line-height: 1.6;
+    box-shadow: 0 6px 16px rgba(180, 160, 255, 0.15);
+    transition: transform 0.3s;
+    border-left: 5px solid #b197fc;
+  }
+  li:hover { transform: translateX(6px); }
+  .note {
+    text-align: center;
+    font-size: 1.1em;
+    color: #d6336c;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 13px 30px;
+    background: linear-gradient(135deg, #a78bfa, #c4b5fd);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 20px rgba(167, 139, 250, 0.4);
+  }
+  .btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 28px rgba(167, 139, 250, 0.55);
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Маленькие вещи, которые я хочу тебе сказать 💜</h1>
+  <ul>
+    <li>🌷 Ты справляешься лучше, чем тебе кажется. Даже в дни, когда всё валится из рук.</li>
+    <li>☕ Сделай себе сегодня что-нибудь приятное — чай, ванну, любимый сериал. Ты заслуживаешь.</li>
+    <li>🌸 Твоя улыбка — это отдельный вид счастья. Я серьёзно.</li>
+    <li>✨ Плохие дни не определяют тебя. Они просто проходят. А ты остаёшься.</li>
+    <li>💛 Даже если я сегодня вялый — мои чувства к тебе никуда не делись. Они просто тихие.</li>
+  </ul>
+  <p class="note">Спасибо, что ты есть. Обнимаю тебя крепко-крепко 🤍</p>
+  <a href="index.html" class="btn">← Вернуться назад</a>
+</div>
+
+</body>
+</html>
